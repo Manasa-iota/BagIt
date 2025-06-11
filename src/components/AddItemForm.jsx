@@ -1,10 +1,27 @@
+import { useRef, useState } from "react";
 import Button from "./Button";
 
-export default function AddItemForm() {
+export default function AddItemForm({handleAddItem}) {
+  const inputRef = useRef();
+  const [itemText,setItemText] = useState();
+
+  const handleSubmit =(e)=>{
+      e.preventDefault();
+            if(!itemText){
+              inputRef.current.focus();
+              return;
+            }
+            
+          handleAddItem(itemText);
+          setItemText("")
+  }
+
   return (
-    <form >
+    <form onSubmit={handleSubmit}>
         <h2>Add an item</h2>
-        <input/>
+        <input value={itemText} ref={inputRef} autoFocus onChange={(e)=>{
+          setItemText(e.target.value)
+        }}/>
         <Button text="Add to list"/>
     </form>
   )
