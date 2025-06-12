@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <footer>
-        <small>&copy; 2050 . copyright by manasa</small>
-        <p>Version <b>1.5</b></p>
+      <small>&copy; 2025 Manasa. All rights reserved.</small>
+      <p>Version <b>1.0</b></p>
     </footer>
-  )
+  );
 }
