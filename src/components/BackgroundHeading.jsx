@@ -1,5 +1,5 @@
 export default function BackgroundHeading() {
   return (
-    <h1>trekbag</h1>
+    <h1>BagIt</h1>
   )
 }
