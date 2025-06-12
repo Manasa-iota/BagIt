@@ -1,12 +1,12 @@
 import Button from "./Button";
 import { secondaryButtons } from "../lib/constants";
-import { useItemsContext } from "../lib/hooks";
+import { handleClicks } from "../stores/itemsStore";
 
 export default function ButtonGroup() {
-  const {handleClicks} =useItemsContext();
+  // const handleClicks =useItemsStore(state=>state.handleClicks);
   return (
     <section className="button-group">
-        {secondaryButtons.map(((text,index )=>  <Button key={index} type="secondary" text={text} onClick={handleClicks[text]} />
+        {secondaryButtons.map(((text,index )=>  <Button key={index} type="secondary" text={text} onClick={() => handleClicks[text]?.()}/>
         ))
         }
 

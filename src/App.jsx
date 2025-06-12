@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ItemList from "./components/ItemList";
 import Sidebar from "./components/Sidebar";
-import ItemContextProvider from "./contexts/ItemContextProvider";
+// import ItemContextProvider from "./contexts/ItemContextProvider";
 
 
 function App() {
@@ -12,11 +12,11 @@ function App() {
     <>
       <BackgroundHeading />
       <main>
-        <ItemContextProvider>
+        {/* <ItemContextProvider> */}
           <Header />
           <ItemList />
           <Sidebar />
-        </ItemContextProvider>
+        {/* </ItemContextProvider> */}
       </main>
       <Footer />
     </>
