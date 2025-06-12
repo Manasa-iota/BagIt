@@ -1,11 +1,5 @@
-export default function Button({text,type,handleClicks}) {
-  const handleClick = () => {
-    if (handleClicks && typeof handleClicks[text] === 'function') {
-      handleClicks[text]();
-    }
-  };
-
+export default function Button({text,type,onClick}) {
   return (
-    <button onClick={handleClick} className={`btn ${type==='secondary'? "btn--secondary":""}`} >{text}</button>
+    <button onClick={onClick} className={`btn ${type==='secondary'? "btn--secondary":""}`} >{text}</button>
   )
 }

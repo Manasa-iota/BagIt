@@ -3,7 +3,7 @@ import { secondaryButtons } from "../lib/constants";
 export default function ButtonGroup({handleClicks}) {
   return (
     <section className="button-group">
-        {secondaryButtons.map(((text,index )=>  <Button key={index} type="secondary" text={text} handleClicks={handleClicks} />
+        {secondaryButtons.map(((text,index )=>  <Button key={index} type="secondary" text={text} onClick={handleClicks[text]} />
         ))
         }
 
