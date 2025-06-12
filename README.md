@@ -1,5 +1,4 @@
-
-TrekBag is a minimal packing checklist web app built with React and Vite. It allows users to add, check, and remove items efficiently before a trip.
+BagIt is a minimal packing checklist web app built with React and Vite. It allows users to add, check, and remove items efficiently before a trip.
 
 ## Highlights
 
