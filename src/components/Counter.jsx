@@ -1,9 +1,11 @@
 import { useItemsStore } from "../stores/itemsStore"
 
-
 export default function Counter() {
-  const totalItems = useItemsStore(state=>state.totalItems);
-  const markedItems = useItemsStore(state=>state.markedItems);
+  const items = useItemsStore((state) => state.items);
+  const totalItems = items.length;
+  const markedItems = items.filter((item) => item.packed).length;
+
+
   return (
     <p>
         <b>{markedItems}</b>/{totalItems} are packed    

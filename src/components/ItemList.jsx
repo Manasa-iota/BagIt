@@ -35,7 +35,7 @@ const sortedItems = useMemo(()=>[...items].sort((a, b) => {
     
     <ul className="item-list">
       { 
-        items.length>0 && <section className="sorting">
+        items.length>0 && <section key={"sort-selection"} className="sorting">
         <Select defaultValue={sortingOptions[0]} options={sortingOptions} onChange={option=>setSortBy(option.value)} />
       </section>
       }

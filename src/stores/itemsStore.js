@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { items as initialItems } from "../lib/constants";
+import { persist } from "zustand/middleware";
 
-
-export const useItemsStore = create((set) => ({
-  items: localStorage.getItem("items") || initialItems,
+export const useItemsStore = create(persist((set) => ({
+  items: initialItems,
   handleAddItem: (newItemText) => {
     const newItem = {
       name: newItemText,
@@ -35,7 +35,11 @@ export const useItemsStore = create((set) => ({
     set((state) => ({
       items: state.items.filter((item) => item.id !== id),
     })),
-}));
+}),
+{
+  name:"items"
+}
+));
 
 
 export const handleClicks = {
