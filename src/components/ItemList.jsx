@@ -3,22 +3,22 @@ export default function ItemList({items, toogleCheck,removeItem}) {
   return (
     <ul className="item-list">
       {items.map((item) => (
-        <Item key={item.id} item={item} toogleCheck={toogleCheck} removeItem ={removeItem} />
+        <Item key={item.id} item={item} onToogleCheck={toogleCheck} onRemoveItem ={removeItem} />
       ))}
     </ul>
   );
 }
 
-function Item({ item, toogleCheck, removeItem }) {
+function Item({ item, onToogleCheck, onRemoveItem }) {
   return (
     <>
       <li className="item">
         <label>
-          <input type="checkbox" checked={item.packed} onChange={()=>toogleCheck(item)} />
+          <input type="checkbox" checked={item.packed} onChange={()=>onToogleCheck(item)} />
           {item.name}
         </label>
         <button onClick={()=>{ 
-          removeItem(item)
+          onRemoveItem(item)
         }}>❌</button>
       </li>
     </>
