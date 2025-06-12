@@ -2,7 +2,7 @@ BagIt is a minimal packing checklist web app built with React and Vite. It allow
 
 ## Highlights
 
-- React with Context API for state management
+- React with Zustandfor state management
 - Modular component-based architecture
 - Fast build setup using Vite
 - Clean, responsive UI
