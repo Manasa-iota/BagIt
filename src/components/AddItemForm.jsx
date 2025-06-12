@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function AddItemForm({onAddItem}) {
   const inputRef = useRef();
-  const [itemText,setItemText] = useState();
+  const [itemText,setItemText] = useState("");
 
   const handleSubmit =(e)=>{
       e.preventDefault();
